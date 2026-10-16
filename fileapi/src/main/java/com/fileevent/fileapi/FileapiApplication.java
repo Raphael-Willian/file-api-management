@@ -3,9 +3,11 @@ package com.fileevent.fileapi;
 import com.fileevent.common.messaging.FileMessagingConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
+@ConfigurationPropertiesScan
 @Import(FileMessagingConfiguration.class)
 public class FileapiApplication {
 

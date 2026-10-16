@@ -1,10 +1,19 @@
 server:
   port: ${FILE_API_PORT:8080}
 
+file:
+  storage:
+    directory: ${FILE_STORAGE_DIR}
+
 spring:
 
   application:
     name: fileapi
+
+  servlet:
+    multipart:
+      max-file-size: ${MAX_FILE_SIZE}
+      max-request-size: ${MAX_REQUEST_SIZE}
 
   datasource:
     url: ${DB_URL}
