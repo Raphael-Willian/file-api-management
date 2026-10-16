@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: deliveryworker
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: ${DB_DIALECT}
+
+  rabbitmq:
+    host: ${RABBITMQ_HOST}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USER}
+    password: ${RABBITMQ_PASSWORD}
+
+    listener:
+      simple:
+        prefetch: 1
+        default-requeue-rejected: false
+        retry:
+          enabled: true
+          max-attempts: 4
+          initial-interval: 1000
+          multiplier: 2.0
+          max-interval: 10000
