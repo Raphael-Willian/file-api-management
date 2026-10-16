@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS store_files (
+CREATE TABLE IF NOT EXISTS stored_file (
 
     id UUID PRIMARY KEY,
     original_filename VARCHAR(255) NOT NULL,
